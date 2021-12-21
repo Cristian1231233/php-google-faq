@@ -65,6 +65,7 @@ $titleText = [
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" integrity="sha512-PgQMlq+nqFLV4ylk1gwUOgm6CtIIXkKwaIHp/PAIWHzig/lKZSEGKEysh0TCVbHJXCLN7WetD8TFecIky75ZfQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Document</title>
     <style>
         *{
@@ -73,31 +74,82 @@ $titleText = [
             box-sizing: border-box;
         }
         header{
+            position: fixed;
+            width: 100%;
             min-height: 100px;
-            border: 1px solid black;
+            background-color: white;
+            border-bottom: 1px solid gray;
         }
         .header-top{
             display: flex;
             justify-content: space-between;
             padding: 20px 17px;
         }
+        .logo-text{
+            display: flex;
+            align-items: center;
+        }
+        .text{
+            color: gray;
+            font-size: 25px;
+            margin-left: 10px;
+        }
+        .logo{
+            width: 100px;
+            height: 45px;
+        }
+        img{
+            width: 100%;
+            height: 100%;
+        }
         
         .icon-profile{
             display: flex;
             align-items: center;
-            border: 1px solid black;
+        }
+        .icon{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            width: 35px;
+            height: 35px;
+            color: gray;
+            background-color: #F0F0F0;
+            cursor: pointer;
+        }
+        .profile{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            background-color: blue;
+            color: white;
+            margin-left: 20px;
+            cursor: pointer;
         }
         .header-bottom ul{
             display: flex;
         }
         .header-bottom li{
+            font-size: 17px;
+            color: gray;
             list-style: none;
-            padding: 10px 20px;
+            margin: 0 20px;
+            padding-bottom: 16px;
+        }
+        li:last-child{
+            color: blue;
+            border-bottom: 3px solid blue;
+        }
+        main{
+            padding-top: 100px;
         }
         .container{
             width: 75%;
             margin: auto;
-            border: 1px solid black;
             padding-top: 60px;
         }
         .paragrafo{
@@ -114,11 +166,14 @@ $titleText = [
         <header>
             <div class="header-top">
                 <div class="logo-text">
-                    Google Termini e Privacy
+                    <div class="logo">
+                        <img src="https://1000marche.net/wp-content/uploads/2020/03/Google-logo.png" alt="">
+                    </div>
+                    <div class="text">Termini e Privacy</div>
                 </div>
                 <div class="icon-profile">
-                    <div class="icon">icon</div>
-                    <div class="profile">C</div>
+                    <div class="icon"><i class="fas fa-ellipsis-v"></i></div>
+                    <div class="profile"><strong>C</strong></div>
                 </div>
             </div>
             <div class="header-bottom">
